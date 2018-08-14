@@ -19,11 +19,8 @@ class ScootersController < ApplicationController
 
   def create
     @scooter = Scooter.new(scooter_params)
-    @scooter.user = current_user
+    @scooter.user = curre
 
-    if @scooter.save
-      redirect_to @scooter
-    else
       render :new
     end
   end
