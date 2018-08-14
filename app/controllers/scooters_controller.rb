@@ -21,8 +21,7 @@ class ScootersController < ApplicationController
     @scooter = Scooter.new(scooter_params)
     @scooter.user = curre
 
-      render :new
-    end
+    render :new
   end
 
   def edit
