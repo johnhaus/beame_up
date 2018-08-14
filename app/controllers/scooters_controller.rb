@@ -5,6 +5,7 @@ class ScootersController < ApplicationController
   end
 
   def show
+    @scooter = Scooter.find(params[:id])
   end
 
   def new
