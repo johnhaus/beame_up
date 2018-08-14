@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
   root to: 'pages#home'
 
   resources :scooters do
@@ -8,5 +7,6 @@ Rails.application.routes.draw do
     end
   end
 
+  devise_for :users
 
 end
