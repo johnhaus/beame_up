@@ -47,6 +47,10 @@ class ScootersController < ApplicationController
   end
 
   def destroy
+    @scooter = Scooter.find(params[:id])
+    @scooter.destroy
+
+    redirect_to my_scooters_scooters_path
   end
 
   private
