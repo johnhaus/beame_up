@@ -13,3 +13,27 @@
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+
+.flexbox {
+  display: flex;
+}
+
+.flex-left {
+  background-color: grey;
+  flex-grow: 1;
+}
+
+.card-grid {
+  background-color: white;
+
+}
+
+.flex-right {
+  background-color: whitesmoke;
+  flex-grow: 1;
+}
+
+.map {
+
+}
+
