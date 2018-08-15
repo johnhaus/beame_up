@@ -2,25 +2,25 @@
   BeameUp
 <% end %>
 
-<div class="flexbox">
-  <div class="flex-left">
-    <h1>Scooters</h1>
+  <div class="flexbox">
+    <div class="flex-left">
+      <h1 class="text-center">Scooters</h1>
 
-    <p><%= link_to "Back", root_path %></p>
+      <p><%= link_to "Back", root_path %></p>
 
-    <div class="card-grid">
-      <% @scooters.each do |scooter| %>
-        <div class="card"><%= scooter.name %> - <%= scooter.description %> <%= link_to "Choose", scooter_path(scooter) %></div>
-      <% end %>
-    </div>
-  </div>
-
-  <div class="flex-right">
-
-    <div class="map">
-
+      <div class="card-grid">
+        <% @scooters.each do |scooter| %>
+          <div class="card"><%= scooter.name %> - <%= scooter.description %> <%= link_to "Choose", scooter_path(scooter) %></div>
+        <% end %>
+      </div>
     </div>
 
+    <div class="flex-right">
+
+      <div class="map">
+
+      </div>
+
+    </div>
   </div>
-</div>
 
