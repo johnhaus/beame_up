@@ -1,6 +1,12 @@
-<h1>Scooters#show</h1>
-<p>Find me in app/views/scooters/show.html.erb</p>
+<%= content_for(:title) do %>
+  BeameUp - <%= @scooter.name %>
+<% end %>
 
-<%= @scooter.name %>
-<%= @scooter.description %>
+<p>
+  <strong><%= @scooter.name %></strong>
+</p>
+
+<p>
+  <strong><%= @scooter.description %></strong>
+</p>
 <%= link_to "Rent it!", new_scooter_rent_path(@scooter) %>
