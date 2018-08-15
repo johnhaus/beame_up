@@ -12,8 +12,8 @@ User.create!(name: 'Ann', email: 'ann@user.com', password: 123456)
 User.create!(name: 'Will', email: 'will@user.com', password: 123456)
 
 
-Scooter.create!(name: 'Vezpa', description: '', user: User.first)
-Scooter.create!(name: 'Beoncy', description: '', user: User.second)
-Scooter.create!(name: 'Bizoo', description: '', user: User.third)
-Scooter.create!(name: 'Belha', description: '', user: User.fourth)
-Scooter.create!(name: 'Fierce', description: '', user: User.fifth)
+Scooter.create!(name: 'Vezpa', description: 'Mean Vezpa', user: User.first)
+Scooter.create!(name: 'Beoncy', description: 'Fast as hell', user: User.second)
+Scooter.create!(name: 'Bizoo', description: 'Killer speed', user: User.third)
+Scooter.create!(name: 'Belha', description: 'Chilling on the way', user: User.fourth)
+Scooter.create!(name: 'Fierce', description: 'Enjoy the ride', user: User.fifth)
