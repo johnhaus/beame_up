@@ -6,6 +6,6 @@
 
 <ul>
   <% @scooters.each do |scooter| %>
-    <li><%= scooter.name %> - <%= scooter.description %></li>
+    <li><%= scooter.name %> - <%= scooter.description %> <%= link_to "Choose", scooter_path(scooter) %></li>
   <% end %>
 </ul>
