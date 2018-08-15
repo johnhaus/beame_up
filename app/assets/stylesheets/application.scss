@@ -19,18 +19,16 @@
 }
 
 .flex-left {
-  background-color: grey;
+  background-color: whitesmoke;
   flex-grow: 1;
-}
-
-.card-grid {
-  background-color: white;
-
+  width: 50%;
 }
 
 .flex-right {
-  background-color: whitesmoke;
+  width: 50%;
   flex-grow: 1;
+  background-image: url('https://source.unsplash.com/1600x900/?map');
+  background-size: cover;
 }
 
 .map {
