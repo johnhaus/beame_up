@@ -19,18 +19,21 @@
 }
 
 .flex-left {
-
+  background-color: orange;
+  flex-grow: 1;
 }
 
-.grid-cards {
+.card-grid {
+  background-color: white;
 
 }
 
 .flex-right {
-
+  background-color: green;
+  flex-grow: 1;
 }
 
-.grid-map {
+.map {
 
 }
 
