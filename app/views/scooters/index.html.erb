@@ -1,5 +1,8 @@
-<h1>Scooters#index</h1>
-<p>Find me in app/views/scooters/index.html.erb</p>
+<%= content_for(:title) do %>
+  BeameUp
+<% end %>
+
+<h1>Scooters</h1>
 
 <ul>
   <% @scooters.each do |scooter| %>
