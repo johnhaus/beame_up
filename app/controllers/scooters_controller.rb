@@ -19,9 +19,12 @@ class ScootersController < ApplicationController
 
   def create
     @scooter = Scooter.new(scooter_params)
-    @scooter.user = curre
-
-    render :new
+    @scooter.user = current_user
+    if @scooter.save
+      redirect_to @scooter
+    else
+      render :new
+    end
   end
 
   def edit
@@ -52,7 +55,7 @@ class ScootersController < ApplicationController
   private
 
   def scooter_params
-    params.require(:scooter).permit(:name, :description)
+    params.require(:scooter).permit(:name, :description, :photo)
   end
 
 end
