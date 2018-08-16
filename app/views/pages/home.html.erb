@@ -1,9 +1,12 @@
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://i.ytimg.com/vi/pCXi5vSDg_0/maxresdefault.jpg');">
   <div class="banner-content">
-    <h1>BeameUp Scooter!</h1>
-    <h3><i>We can't beam you up but we can get you there</i></h3>
-    <p>Find a scooter near you</p>
-    <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %></a>
-    <%= link_to "Search", scooters_path, class: "btn btn-primary btn-lg" %>
+    <h1>BeameUp Scooter</h1>
+    <form class="form-inline md-form form-sm">
+        <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Find a scooter near you" aria-label="Search">
+      <%= link_to scooters_path do %>
+        <i class="fa fa-search" aria-hidden="true"></i>
+      <% end %>
+    </form>
+    <button class="button button2">Add Scooter</button>
   </div>
 </div>
