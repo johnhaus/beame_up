@@ -3,6 +3,13 @@ class ScootersController < ApplicationController
 
   def index
     @scooters = Scooter.all
+     @markers = @scooters.map do |scooter|
+      {
+        lat: scooter.latitude,
+        lng: scooter.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+      }
+    end
   end
 
   def my_scooters
