@@ -28,7 +28,8 @@ user = User.create!(name: "owner", email: "owner@gmail.com", password: 123456)
   user.scooters.create!({
     name: Faker::GameOfThrones.character,
     description: Faker::GameOfThrones.quote,
-    remote_picture_url: "https://picsum.photos/200/300/?random"
+    remote_picture_url: "https://picsum.photos/200/300/?random",
+    address: "Rua do Senador Vergueiro 32"
   })
 end
 
