@@ -55,7 +55,7 @@ class ScootersController < ApplicationController
   private
 
   def scooter_params
-    params.require(:scooter).permit(:name, :description, :photo)
+    params.require(:scooter).permit(:name, :description, :picture)
   end
 
 end

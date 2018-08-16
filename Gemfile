@@ -21,7 +21,10 @@ group :development do
   gem 'web-console', '>= 3.3.0'
 end
 
+# gems for cloudnary and .env file
+gem 'cloudinary'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'carrierwave', '~> 1.2'
 
 group :development, :test do
   gem 'pry-byebug'
