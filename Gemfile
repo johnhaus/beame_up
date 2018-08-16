@@ -23,9 +23,9 @@ end
 
 # gems for cloudnary and .env file
 gem 'cloudinary'
-gem 'dotenv-rails', groups: [:development, :test]
 gem 'carrierwave', '~> 1.2'
 gem "geocoder"
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do
   gem 'pry-byebug'

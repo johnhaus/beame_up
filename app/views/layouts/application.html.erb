@@ -21,8 +21,10 @@
     <!-- </div> -->
 
     <%= render "shared/footer" %>
-    <%= javascript_pack_tag 'application' %>
     <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places" %>
+    <%= javascript_pack_tag 'application' %>
+    <%= javascript_pack_tag "map" %>
     <%= yield(:after_js) %>
   </body>
 </html>
