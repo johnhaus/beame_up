@@ -14,6 +14,10 @@
 @import "components/index";
 @import "pages/index";
 
+.no-side-margin {
+  min-height: calc(100vh - 70px);
+}
+
 .flexbox {
   display: flex;
   margin-left: 20px;
