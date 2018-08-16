@@ -16,7 +16,7 @@
 
 .flexbox {
   display: flex;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .flex-left {
@@ -27,13 +27,13 @@
 }
 
 .flex-right {
+
+}
+
+.map {
   width: 50%;
   flex-grow: 1;
   background-image: url('https://source.unsplash.com/1600x900/?map');
   background-size: cover;
-}
-
-.map {
-
 }
 
