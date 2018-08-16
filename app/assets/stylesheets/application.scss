@@ -16,12 +16,14 @@
 
 .flexbox {
   display: flex;
+  margin-left: 30px;
 }
 
 .flex-left {
   background-color: whitesmoke;
   flex-grow: 1;
   width: 50%;
+  margin-right: 10px
 }
 
 .flex-right {
