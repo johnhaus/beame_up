@@ -7,6 +7,8 @@
   <%= f.input :description %>
   <%= f.input :picture %>
   <%= f.input :picture_cache, as: :hidden %>
+  <!-- update owner address for geocoding -->
+  <%= f.input :address %>
 
   <%= f.button :submit %>
 <% end %>

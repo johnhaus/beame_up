@@ -11,6 +11,11 @@ class ScootersController < ApplicationController
 
   def show
     @scooter = Scooter.find(params[:id])
+    @markers = [{
+        lat: @scooter.latitude,
+        lng: @scooter.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+      }]
   end
 
   def new
@@ -55,7 +60,7 @@ class ScootersController < ApplicationController
   private
 
   def scooter_params
-    params.require(:scooter).permit(:name, :description, :picture)
+    params.require(:scooter).permit(:name, :description, :picture, :address)
   end
 
 end
