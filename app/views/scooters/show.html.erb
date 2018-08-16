@@ -6,15 +6,16 @@
   <div class="row margin-top-small">
     <div class="col-md-6 col-sm-12">
       <!-- left side cards section -->
-      <h2><strong><%= @scooter.name %></strong></h2>
+      <div class="img-scooter" style='background-image: url(<%= @scooter.picture %>)'>
+      </div>
 
-      <%= cl_image_tag @scooter.picture, height: 300, width: 500, crop: :fill %>
+      <div class="scooter-description">
+        <h2><strong><%= @scooter.name %></strong></h2>
 
-      <p><%= @scooter.description %></p>
-      <%= @scooter.address %>
-
-      <%= link_to "Rent it!", new_scooter_rent_path(@scooter) %>
-
+        <p><%= @scooter.description %></p>
+        <%= @scooter.address %>
+        <%= link_to "Rent it!", new_scooter_rent_path(@scooter), class: "btn btn-primary" %>
+      </div>
     </div>
     <div class="col-md-6 col-sm-12">
       <!-- right side geocoder -->
