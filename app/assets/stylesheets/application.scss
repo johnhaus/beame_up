@@ -16,22 +16,24 @@
 
 .flexbox {
   display: flex;
+  margin-left: 20px;
 }
 
 .flex-left {
   background-color: whitesmoke;
   flex-grow: 1;
   width: 50%;
+  margin-right: 10px
 }
 
 .flex-right {
+
+}
+
+.map {
   width: 50%;
   flex-grow: 1;
   background-image: url('https://source.unsplash.com/1600x900/?map');
   background-size: cover;
-}
-
-.map {
-
 }
 
