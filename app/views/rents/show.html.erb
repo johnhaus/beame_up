@@ -1,3 +1,17 @@
-<p>my rental</p>
-<%= @rent.start_date %>
-<%= @rent.end_date %>
+<h2>Your Scooter is now rented!</h2>
+
+<p>Here are your details</p>
+
+
+<p>
+  <strong>Your scooter: </strong><%= @rent.scooter.name %>
+</p>
+
+<p>
+  <strong>Description: </strong><%= @rent.scooter.description %>
+</p>
+
+<p><strong>Your scooter is located at: </strong></p>
+<p><strong>Rent start date: </strong><%= @rent.start_date %></p>
+
+<p><strong>Rent end date: </strong><%= @rent.end_date %></p>
