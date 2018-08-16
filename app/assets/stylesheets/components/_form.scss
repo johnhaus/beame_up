@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: "Varela", sans-serif;
+  background-color: white;
+}
+h1, {
+  font-family: "Varela", sans-serif;
+}
+/*.wrapper form {
+  margin: 0px;
+ }*/
+.bg {
+background-color: whitesmoke;
+border-radius: 3px;
+padding: 20px 20px;
+}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+/*.wrapper h3 {
+  margin-top: 0px ;
+  text-align: center;
+  padding: 10px;
+}*/
+.margin {
+  margin: 20px 0px;
+}
+.line {
+  border: .5px solid #F0AD4E;
+  opacity: .5;
+  margin-bottom: 40px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
