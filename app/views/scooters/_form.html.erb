@@ -1,0 +1,14 @@
+
+<%= simple_form_for scooter do |f| %>
+<div class="form-group">
+<%= f.input :name, class: "form-control" %>
+</div>
+<%= f.input :description %>
+<%= f.input :picture %>
+<%= f.input :picture_cache, as: :hidden %>
+<!-- update owner address for geocoding -->
+<%= f.input :address %>
+
+<%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
+
