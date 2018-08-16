@@ -2,13 +2,10 @@
   BeameUp - <%= @scooter.name %>
 <% end %>
 
-<p>
-  <strong><%= @scooter.name %></strong>
-</p>
+<p><strong><%= @scooter.name %></strong></p>
 
-<p>
-  <strong><%= @scooter.description %></strong>
-</p>
+<p><strong><%= @scooter.description %></strong></p>
+<%= cl_image_tag @scooter.picture, height: 300, width: 400, crop: :fill %>
 <%= link_to "Rent it!", new_scooter_rent_path(@scooter) %>
 
 <p><%= link_to "Back", scooters_path %></p>
