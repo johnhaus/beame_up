@@ -1,7 +1,11 @@
-<h1>My Scooters</h1>
+<h3>My Scooters</h3>
 
 <ul>
   <% @scooters.each do |scooter| %>
     <li><%= scooter.name %> - <%= scooter.description %></li>
   <% end %>
 </ul>
+
+<div class="row">
+  <%= link_to "Add a new scooter", new_scooter_path, class: "btn btn-primary block" %></li>
+</div>

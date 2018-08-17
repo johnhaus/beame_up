@@ -1,4 +1,4 @@
-<p>My rentals</p>
+<h3>My rentals</h3>
 
 <div class="container no-side-margin">
   <div class="row margin-top-small">
@@ -12,7 +12,7 @@
                 <h2><%= rent.scooter.name %></h2>
                 <p><%= rent.start_date %></p>
                 <p><%= rent.end_date %></p>
-                <%= link_to "Delete", rent_path(rent), class: "btn btn-primary" %>
+                <%= link_to "Delete", rent_path(rent), data: {confirm: "Are you sure?"}, method: :delete, class: "btn btn-primary" %>
               </div>
             </div>
           </div>
