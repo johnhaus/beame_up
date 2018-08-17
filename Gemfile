@@ -17,14 +17,17 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
 gem 'faker'
+
 group :development do
-  gem 'web-console', '>= 3.3.0'
+gem 'web-console', '>= 3.3.0'
 end
 
-# gems for cloudnary and .env file
+# gems for cloudnary and .env file and pg_search
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
 gem "geocoder"
+gem 'pg_search'
+
 
 group :development, :test do
   gem 'pry-byebug'
