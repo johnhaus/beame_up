@@ -1,4 +1,6 @@
-<h1>Rent#new</h1>
+<h1>Select your rental dates</h1>
+
+<p>
 
 <%= form_for([@scooter, @rent], method: :post) do |f| %>
   <%= f.label :start_date %>
@@ -10,5 +12,28 @@
   <%= f.submit %>
 <% end %>
 
+</p>
+
+<div class="container no-side-margin">
+  <div class="row margin-top-small">
+    <div class="col-md-6 col-sm-12">
+      <!-- left side cards section -->
+      <div class="img-scooter" style='background-image: url(<%= @scooter.picture %>)'>
+      </div>
+
+      <div class="scooter-description">
+
+        <%= link_to "Rent it!", new_scooter_rent_path(@scooter), class: "btn btn-primary" %>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <!-- right side geocoder -->
+        <h2><strong><%= @scooter.name %></strong></h2>
+        <p><%= @scooter.description %></p>
+        <%= @scooter.address %>
+
+    </div>
+  </div>
+</div>
 
 <p><%= link_to "Back", scooters_path%></p>
