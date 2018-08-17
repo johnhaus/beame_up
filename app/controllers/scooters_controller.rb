@@ -38,7 +38,7 @@ class ScootersController < ApplicationController
     @scooter = Scooter.new(scooter_params)
     @scooter.user = current_user
     if @scooter.save
-      redirect_to @scooter
+      redirect_to scooters_path
     else
       render :new
     end
@@ -56,7 +56,7 @@ class ScootersController < ApplicationController
     #saving it inside your db
     if @scooter.save
       #after saving, i want to go to a page: show page of the current scooter
-      redirect_to scooter_path(@scooter)
+      redirect_to @scooter
     else
       render :edit
     end
