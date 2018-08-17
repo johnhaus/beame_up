@@ -18,7 +18,7 @@
 # Scooter.create!(name: 'Belha', description: 'Chilling on the way', user: User.fourth)
 # Scooter.create!(name: 'Fierce', description: 'Enjoy the ride', user: User.fifth)
 
-
+# How Eric populated my user seed
 5.times do |t|
   user = User.create(name: Faker::FunnyName.name, email: Faker::Internet.email, password: 123456)
 end

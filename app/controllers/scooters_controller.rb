@@ -2,11 +2,16 @@ class ScootersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @scooters = Scooter.all
+    if params[:query].present?
+      @scooters = Scooter.near(params[:query], 10)
+    else
+      @scooters = Scooter.all
+    end
+
      @markers = @scooters.map do |scooter|
       {
         lat: scooter.latitude,
-        lng: scooter.longitude#,
+        lng: scooter.longitude
         # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
       }
     end
@@ -20,7 +25,7 @@ class ScootersController < ApplicationController
     @scooter = Scooter.find(params[:id])
     @markers = [{
         lat: @scooter.latitude,
-        lng: @scooter.longitude#,
+        lng: @scooter.longitude
         # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
       }]
   end
