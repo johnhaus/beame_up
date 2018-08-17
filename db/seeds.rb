@@ -18,20 +18,35 @@
 # Scooter.create!(name: 'Belha', description: 'Chilling on the way', user: User.fourth)
 # Scooter.create!(name: 'Fierce', description: 'Enjoy the ride', user: User.fifth)
 
+address = [
+  'Rua Visconde de Pirajá 444, Ipanema, Rio de Janeiro',
+  'Rua Redentor 40, Ipanema, Rio de Janeiro',
+  'Rua Barata Ribeiro 22, Copacabana, Rio de Janeiro',
+  'Rua Maria Quitéria 200, Ipanema, Rio de Janeiro',
+  'Rua Alberto de Campos 176, Ipanema, Rio de Janeiro',
+  'Rua Santa Clara 303, Copacabana, Rio de Janeiro',
+  'Rua Visconde de Pirajá 150, Ipanema, Rio de Janeiro',
+  'Rua Visconde de Pirajá 175, Ipanema, Rio de Janeiro',
+  'Rua Dois de Dezembro, Flamengo, Rio de Janeiro',
+
+]
+
+
 # How Eric populated my user seed
 5.times do |t|
   user = User.create(name: Faker::FunnyName.name, email: Faker::Internet.email, password: 123456)
 end
 
 user = User.create!(name: "owner", email: "owner@gmail.com", password: 123456)
-3.times do
+24.times do
   user.scooters.create!({
     name: Faker::GameOfThrones.character,
     description: Faker::GameOfThrones.quote,
     remote_picture_url: "https://picsum.photos/200/300/?random",
-    address: "16 Villa Gaudelet, Paris"
+    address: address.sample
   })
 end
+
 
 
 
