@@ -5,7 +5,7 @@ class ScootersController < ApplicationController
     if params[:query].present?
       @scooters = Scooter.near(params[:query], 10)
     else
-      @scooter = Scooter.all
+      @scooters = Scooter.all
     end
 
      @markers = @scooters.map do |scooter|
