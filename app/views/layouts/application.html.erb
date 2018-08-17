@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><%= yield(:title).present? ? yield(:title) : 'Beamup' %></title>
-    <%= csrf_meta_tags %>
-    <%= action_cable_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
-  </head>
-  <body>
-    <%= render "shared/navbar" %>
-    <%= render "shared/flashes" %>
-    <!-- <div class="main-container"> -->
-      <!-- <div class="row"> -->
-        <!-- <div class="col-sm-4 col-sm-offset-4"> -->
-          <div class="set-footer">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title><%= yield(:title).present? ? yield(:title) : 'Beamup' %></title>
+  <%= csrf_meta_tags %>
+  <%= action_cable_meta_tag %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+</head>
+<body>
+  <%= render "shared/navbar" %>
+  <%= render "shared/flashes" %>
+  <!-- <div class="main-container"> -->
+    <!-- <div class="row"> -->
+      <!-- <div class="col-sm-4 col-sm-offset-4"> -->
+        <% if action_name == "home" || action_name == "index" %>
+          <%= yield %>
+        <% else %>
+          <div class="container set-footer">
             <%= yield %>
           </div>
+        <% end %>
         <!-- </div> -->
-      <!-- </div> -->
-    <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
 
-    <%= render "shared/footer" %>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places" %>
-    <%= javascript_pack_tag 'application' %>
-    <%= javascript_pack_tag "map" %>
-    <%= yield(:after_js) %>
+        <%= render "shared/footer" %>
+        <%= javascript_include_tag 'application' %>
+        <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places" %>
+        <%= javascript_pack_tag 'application' %>
+        <%= javascript_pack_tag "map" %>
+        <%= yield(:after_js) %>
   </body>
 </html>
