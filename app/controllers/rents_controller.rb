@@ -1,5 +1,9 @@
 class RentsController < ApplicationController
 
+  def index
+    @rents = Rent.all
+  end
+
   def show
     @rent = Rent.find(params[:id])
   end
@@ -21,6 +25,13 @@ class RentsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @rent = Rent.find(params[:id])
+    @rent.destroy
+
+    redirect_to rents_path
   end
 
   private

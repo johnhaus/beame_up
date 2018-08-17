@@ -1,1 +1,28 @@
 <p>My rentals</p>
+
+<div class="container no-side-margin">
+  <div class="row margin-top-small">
+    <div class="col-md-6 col-sm-12">
+      <!-- left side cards section -->
+      <div class="row">
+        <% @rents.each do |rent| %>
+          <div class="col-sm-6 col-xs-12">
+            <div class="card" style='background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= rent.scooter.picture %>)' >
+              <div class="card-description">
+                <h2><%= rent.scooter.name %></h2>
+                <p><%= rent.start_date %></p>
+                <p><%= rent.end_date %></p>
+                <%= link_to "Delete", rent_path(rent), class: "btn btn-primary" %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <!-- right side geocoder -->
+      <div id="map" class="sticky" data-markers="<%= @markers.to_json %>"></div>
+    </div>
+  </div>
+</div>
