@@ -8,7 +8,7 @@
             <div class="card" style='background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= scooter.picture %>)' >
               <div class="card-description">
                 <h2><%= scooter.name %></h2>
-                <p><%= scooter.description %></p>
+                <p><%= scooter.description.truncate(40) %></p>
                 <%= link_to "Choose", scooter_path(scooter), class: "btn btn-primary" %>
               </div>
             </div>
